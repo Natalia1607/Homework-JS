@@ -59,7 +59,7 @@ async function loadTasks(limit = 10) {
         let loadedTasks = await response.json();
         return loadedTasks;
     } catch (error) {
-        alert(e.message);
+        alert(error.message);
     }
 }
 
@@ -73,7 +73,7 @@ async function sendTasck(task) {
         let newTask = await response.json();
         return newTask;      
     } catch (error) {
-        alert(e.message);
+        alert(error.message);
     }
 }
 
@@ -87,7 +87,7 @@ async function updateTaskStatus(taskId, iscompleted) {
         let updatedTask = await response.json();
         return updatedTask;     
     } catch (error) {
-        alert(e.message)
+        alert(error.message)
     }
 }
 
@@ -99,6 +99,6 @@ async function deleteTask(taskId) {
         });
         return response.ok; 
     } catch (error) {
-        alert(e.message)
+        alert(error.message)
     }
 }
