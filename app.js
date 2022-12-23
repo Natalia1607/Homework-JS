@@ -55,7 +55,7 @@ function updateDOMTasks() {
 
 async function loadTasks(limit = 10) {
     try {    
-        let response = await fetch('http://jsonplaceholder.typicode.com' + `/todos?_limit=${limit}`);
+        let response = await fetch('https://jsonplaceholder.typicode.com' + `/todos?_limit=${limit}`);
         let loadedTasks = await response.json();
         return loadedTasks;
     } catch (error) {
@@ -87,7 +87,7 @@ async function updateTaskStatus(taskId, iscompleted) {
         let updatedTask = await response.json();
         return updatedTask;     
     } catch (error) {
-        alert(error.message)
+        alert(error.message);
     }
 }
 
@@ -99,6 +99,6 @@ async function deleteTask(taskId) {
         });
         return response.ok; 
     } catch (error) {
-        alert(error.message)
+        alert(error.message);
     }
 }
